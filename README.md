@@ -5,5 +5,5 @@ This is the readme for documenting `Lab21 project`.
 | -----: | :--------- | :----------------------------------------- |
 |  1     | [Ansible Playbooks](https://github.com/myseq/notes/tree/main/playbooks "     ~ Ansible Playbooks")  | Ansible playbooks for sysadm operations |
 |  2     | [Cheat sheets](https://github.com/myseq/notes/ "     ~ Cheat sheets and notes")    | Collections of notes and cheat sheets |
-|  3     | cloud | Stores cloud-init YAML files |
+|  3     | [clouds/](https://github.com/myseq/Lab21/tree/main/clouds "") | Stores cloud-init YAML files |
 |  4     |      |    |
