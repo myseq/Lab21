@@ -25,3 +25,10 @@ local.driver
 local.passphrase
 local.privileged-mounts
 ```
+
+## Multipass Default folders
+```cmd
+C:\Program Files\Multipass\
+C:\ProgramData\Multipass\
+C:\Users\<user>\AppData\Local\Multipass\
+```
