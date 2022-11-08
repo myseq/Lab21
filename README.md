@@ -1,7 +1,9 @@
 # Lab21 (README.md)
-Lab21 is a serie of tutorials created for learning different technologies. 
+Lab21 is a serie of tutorials created for learning different technologies :technologist:. 
 
-I've invested a lot of my time in _building_ them as projects, and **make** them happen. Lab21 is build with _**DevOps**_ model in mind.
+Lab21 is mostly developed with  _**DevOps**_ model in mind. Each of the tutorial comes with `README.md`, and anyone can easily follow along.
+
+:cowboy_hat_face: I've invested a lot of my time :hourglass: in _building_ them as projects, and **make** them happen :sparkler:.
 
 
 ## Lab21 Tutorials
@@ -11,7 +13,7 @@ All the tutorials are created by following Greek alphabet. Below is the list of 
 | ---: | :------- | :--------------- | :--: |
 | 1    | [alpha](https://github.com/myseq/Lab21/tree/main/clouds)    | Ansible playbooks for sysadm operations | 2021 |
 | 2    | [beta](https://github.com/myseq/Lab21/tree/main/LB_with_Nginx)     | Load-balance web servers with Nginx | 2022 |
-| 3    | [gamma]()    | IaaS infra mgmt operation with dockers and K8s | 2022 |
+| 3    | [gamma]()    | **IaaS** infra mgmt operation with dockers and K8s | 2022 |
 | 4    | delta    |  |  |
 | 5    | epsilon  |  |  |
 | 6    | zeta     |  |  |
