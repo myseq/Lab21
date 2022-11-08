@@ -7,14 +7,14 @@ I've invested a lot of my time in _building_ them as projects, and **make** them
 ## Lab21 Tutorials
 All the tutorials are created by following Greek alphabet. Below is the list of tutorials and the brief description.
 
-|      | Projects | Description      |
-| ---: | :------- | :--------------- |
-| 1    | [alpha]()    | Ansible playbooks for sysadm operations |
-| 2    | [beta]()     | IaaS infra mgmt operation with dockers and K8s |
-| 3    | gamma    |  |
-| 4    | delta    |  |
-| 5    | epsilon  |  |
-| 6    | zeta     |  |
+|      | Projects | Description      | Year |
+| ---: | :------- | :--------------- | :--: |
+| 1    | [alpha](https://github.com/myseq/Lab21/tree/main/clouds)    | Ansible playbooks for sysadm operations | 2021 |
+| 2    | [beta](https://github.com/myseq/Lab21/tree/main/LB_with_Nginx)     | Load-balance web servers with Nginx | 2022 |
+| 3    | [gamma]()    | IaaS infra mgmt operation with dockers and K8s | 2022 |
+| 4    | delta    |  |  |
+| 5    | epsilon  |  |  |
+| 6    | zeta     |  |  |
 
 
 ## Links
