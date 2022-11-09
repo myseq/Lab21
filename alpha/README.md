@@ -142,6 +142,34 @@ Release:        22.04
 Codename:       jammyNo LSB modules are available.
 ubuntu@jimny:~$
 ```
+### Check the uptime and login user at specific host
+ubuntu@jimny:~$ ansible kiko -a "uptime"
+kiko | CHANGED | rc=0 >>
+ 17:08:51 up 6 min,  1 user,  load average: 0.01, 0.01, 0.00
+ubuntu@jimny:~$ ansible kiko -a "w"
+kiko | CHANGED | rc=0 >>
+ 17:08:57 up 6 min,  1 user,  load average: 0.01, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ubuntu   pts/0    172.24.196.44    17:08    0.00s  0.07s  0.00s w
+ubuntu@jimny:~$
+```
+
+### Install nmap package at kiko
+```bash
+ansible kiko -b -m apt -a "name=nmap state=latest"
+ubuntu@jimny:~$ ansible kiko -a "nmap jimny"
+kiko | CHANGED | rc=0 >>
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-11-09 17:11 +08
+Nmap scan report for jimny (172.24.196.44)
+Host is up (0.00072s latency).
+rDNS record for 172.24.196.44: jimny.mshome.net
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+ubuntu@jimny:~$
+```  
 
 ### PING all hosts (with playbook)
 ```bash
