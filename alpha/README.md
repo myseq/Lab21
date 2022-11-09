@@ -68,7 +68,9 @@ nino ansible_host=nino.mshome.net
 Generate SSH public key
 ```console
 ubuntu@jimny:~$ ssh-keygen -t ed25519 -C "ubuntu@jimny"
-ubuntu@jimny:~$ cat << EOF >> 
+ubuntu@jimny:~$ cat .ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9Cox0CIU2YiQLH2RdLSjI+nNH/z+kB9XGUvHvtKxgF xx@jimny
+ubuntu@jimny:~$ cat << EOF >> ci_sshkey.yaml
 > #cloud-config
 > users:
 >   - name: ubuntu
