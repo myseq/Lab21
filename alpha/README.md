@@ -9,10 +9,11 @@ This is a simple tutorial to learn on basic Ansible playbook to perform sysadm o
 ### What's included
 - IaaS provisioning
   - creating 5 VM hosts
-- SysAdm operation (Ansible playbooks)
   - create ansible hosts file
+- SysAdm operation (Ansible playbooks)
   - check if all the hosts are online
-  - check disk space usage 
+  - run ad hoc command at all hosts
+  - check disk space usage with playbook
   - update and upgrade packages for all hosts
   - reboot and shutdown
    
@@ -65,17 +66,26 @@ nino ansible_host=nino.mshome.net
 
 Generate SSH public key
 ```console
-ubuntu@jimny:~$ ssh-keygen -t ed25519 -C "xx@jimny"
-ubuntu@jimny:~$ echo ssh_authorized_keys: > ci_ansible2.yaml
-ubuntu@jimny:~$ echo "  - `cat .ssh/id_ed25519.pub`" >> ci_ansible2.yaml
+ubuntu@jimny:~$ ssh-keygen -t ed25519 -C "ubuntu@jimny"
+ubuntu@jimny:~$ echo ssh_authorized_keys: > ci_sshkey.yaml
+ubuntu@jimny:~$ cat ci_sshkey.yaml
+#cloud-config
+users:
+  - name: ubuntu
+    no_ssh_fingerprints: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9Cox0CIU2YiQLH2RdLSjI+nNH/z+kB9XGUvHvtKxgF ubuntu@jimny
+
+ssh:
+  emit_keys_to_console: false
 ```
 
 ### Create and setup VM hosts (Managed Nodes)
 ```powershell
-PS> multipass launch -n kiko --cloud-init ci_ansible2.yaml
-PS> multipass launch -n lilo --cloud-init ci_ansible2.yaml
-PS> multipass launch -n mimo --cloud-init ci_ansible2.yaml
-PS> multipass launch -n nino --cloud-init ci_ansible2.yaml
+PS> multipass launch -n kiko --cloud-init ci_sshkey.yaml
+PS> multipass launch -n lilo --cloud-init ci_sshkey.yaml
+PS> multipass launch -n mimo --cloud-init ci_sshkey.yaml
+PS> multipass launch -n nino --cloud-init ci_sshkey.yaml
 ```
 
 
