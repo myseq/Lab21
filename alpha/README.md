@@ -92,7 +92,11 @@ PS> multipass launch -n mimo --cloud-init ci_sshkey.yaml
 PS> multipass launch -n nino --cloud-init ci_sshkey.yaml
 ```
 
-
+### Show the Ansible inventory list of VM hosts
+```bash
+ubuntu@jimny:~$ ansible-inventory --list -y
+```  
+  
 ## SysAdm Operation
 To manage system operation with Ansible playbook. 
 
