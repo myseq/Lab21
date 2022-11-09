@@ -12,7 +12,7 @@ All the tutorials are created by following Greek alphabet. Below is the list of 
 |      | Projects | Description      | Year |
 | ---: | :------- | :--------------- | :--: |
 | 1    | [alpha](https://github.com/myseq/Lab21/tree/main/clouds)    | Ansible playbooks for sysadm operations | 2021 |
-| 2    | [beta](https://github.com/myseq/Lab21/tree/main/LB_with_Nginx)     | Load-balance web servers with Nginx | 2022 |
+| 2    | [beta](https://github.com/myseq/Lab21/tree/main/beta)     | Load-balance web servers with Nginx | 2022 |
 | 3    | [gamma]()    | **IaaS** infra mgmt operation with dockers and K8s | 2022 |
 | 4    | delta    |  |  |
 | 5    | epsilon  |  |  |
