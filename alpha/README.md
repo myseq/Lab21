@@ -155,8 +155,8 @@ ubuntu   pts/0    172.24.196.44    17:08    0.00s  0.07s  0.00s w
 ubuntu@jimny:~$
 ```
 
-### Install nmap package at kiko
-```bash
+### Install nmap package at specific host
+```console
 ansible kiko -b -m apt -a "name=nmap state=latest"
 ubuntu@jimny:~$ ansible kiko -a "nmap jimny"
 kiko | CHANGED | rc=0 >>
