@@ -171,6 +171,18 @@ ubuntu@jimny:~/playbooks$ ansible-playbook asb_reboot.yml
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_poweroff.yml
 ```
 
+Verify if all VM hosts are shutdown
+```powershell
+PS> multipass list
+Name                    State             IPv4             Image
+jimny                   Running           172.24.196.44    Ubuntu 22.04 LTS
+kiko                    Stopped           --               Ubuntu 22.04 LTS
+lilo                    Stopped           --               Ubuntu 22.04 LTS
+mimo                    Stopped           --               Ubuntu 22.04 LTS
+nino                    Stopped           --               Ubuntu 22.04 LTS
+```  
+
+  
 ## Misc
 - Some cloud_init [sample files](cloud_init/)  
 
