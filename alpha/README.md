@@ -143,6 +143,7 @@ Codename:       jammyNo LSB modules are available.
 ubuntu@jimny:~$
 ```
 ### Check the uptime and login user at specific host
+```console
 ubuntu@jimny:~$ ansible kiko -a "uptime"
 kiko | CHANGED | rc=0 >>
  17:08:51 up 6 min,  1 user,  load average: 0.01, 0.01, 0.00
