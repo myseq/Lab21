@@ -8,6 +8,10 @@ This tutorial will experience in:
 - create a utility to inspect and monitor the patch operation (webping.py)
 - **simulate docker patching on mutable infrastructure** :sparkler: 
 
+### Pre-requisites
+- Pre-install with [Multipass](https://multipass.run/install)
+- Allocate 16GB RAM and 20G disk space
+
 ## Architecture and Plan
 ```
              -------------------------------------------
@@ -24,12 +28,12 @@ This tutorial will experience in:
 
 ```
 
-|     | VM Host | Role              |
-| --: | :------ | :---------------- |
-| 1   | kiko    | K8s client        |
-| 2   | lilo    | K8s master node   |
-| 3   | mino    | K8s worker node 1 |
-| 4   | nino    | K8s worker node 2 |
+|     | VM Host | Role                                    |
+| --: | :------ | :-------------------------------------- |
+| 1   | kiko    | K8s client ; docker compose; webping.py |
+| 2   | lilo    | K8s master node                         |
+| 3   | mino    | K8s worker node 1                       |
+| 4   | nino    | K8s worker node 2                       |
 
 
 ### Plan (high level) 
