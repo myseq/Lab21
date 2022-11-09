@@ -117,6 +117,21 @@ $ ansible-playbook df.yml
 $ ansible-playbook df.yml -l group_a,group_b
 ```
 
+### Update packages
+```bash
+
+```
+
+### Reboot hosts
+```bash
+
+```
+  
+### Shutdown all hosts
+```bash
+
+```
+
 ## Misc
 - Some cloud_init [sample files](cloud_init/)  
 
