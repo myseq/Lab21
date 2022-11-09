@@ -8,7 +8,7 @@ This tutorial will experience in:
 - create a utility to inspect and monitor the patch operation
 - simulate docker patching on mutable infrastructure
 
-## Architecture
+## Architecture and Plan
 ```
              -------------------------------------------
              |                       ______            |
@@ -32,13 +32,21 @@ This tutorial will experience in:
 | 4   | nino    | K8s worker node 2 |
 
 
-## Plan (high level) 
+### Plan (high level) 
 1. Creating 4 VM which include: 
    - 1 k8s client, 1 k8s master node, and 2 k8s worker node
-2. Deploy unpatched app at k8s clueter with load-balancer
+2. Deploy unpatch app at k8s clueter with load-balancer
 3. Develop a utility to check and monitor the patch operation
    - webping.py
 4. Perform patching operation on mutable infrastructure
    - Deploy the new image with k8s
-   - Simulate patching operation on apps
+   - Simulate patching operation over unpatch app with patched app
+
+## Create 4 VM
+
+## Deploy Unpatch App
+
+## Develop webping Utility
+
+## Perform Patching Operation
 
