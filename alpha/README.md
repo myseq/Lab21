@@ -85,7 +85,7 @@ To manage system operation with Ansible playbook.
 
 ### Check if hosts are online
 ```console
-ubuntu@jimny:~/playbooks$ ansible all -m ping
+ubuntu@jimny:~$ ansible all -m ping
 lilo | SUCCESS => {
     "changed": false,
     "ping": "pong"
