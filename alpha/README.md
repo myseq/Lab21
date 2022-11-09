@@ -23,7 +23,7 @@ To provision virtual machines with Multipass.
 
 ### Create and setup VM host (Control Node)
 ```powershell
-PS> multipass launch -n jimny --cloud-init ci_ansible.yml
+PS> multipass launch -n jimny --cloud-init ci_update.yml
 ```
 
 Setup Ansible
