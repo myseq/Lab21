@@ -80,5 +80,6 @@ $ ansible-playbook df.yml -l group_a,group_b
 ```
 
 ## Misc
-- [Sample](cloud_init/) cloud_init files  
+- Some cloud_init [sample files](cloud_init/)  
+
 
