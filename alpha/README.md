@@ -20,28 +20,26 @@ This is a simple tutorial to learn on basic Ansible playbook to perform sysadm o
 ## IaaS Provisioning
 To provision virtual machines with Multipass.
 
-### Create VM hosts
+### Create and setup VM host (Control Node)
 ```powershell
-PS> multipass launch -n jimny
-PS> multipass launch -n kiko
-PS> multipass launch -n lilo
-PS> multipass launch -n mimo
-PS> multipass launch -n nino
+PS> multipass launch -n jimny --cloud-init ci_ansible.yml
 ```
 
-### Setup Ansible
+Setup Ansible
+```powershell
+PS> multipass shell jimny
+```
 ```bash
-$ 
+ubuntu@jimny:~$ sudo apt-add-repository ppa:ansible/ansible
+ubuntu@jimny:~$ sudo apt update
+ubuntu@jimny:~$ sudo apt install ansible
+ubuntu@jimny:~$ ansible-config init --disabled > ansible.init
 ```
-
-## SysAdm Operation
-To manage system operation with Ansible playbook. 
-
-### Create inventory file (/etc/ansible/hosts)
+Create inventory file (/etc/ansible/hosts)
 ```console
 $ cat hosts
 [all:vars]
-ansible_user=xx
+ansible_user=ubuntu
 ansible_port=22
 ansible_become_method=sudo
 ansible_python_interpreter=/usr/bin/python3
@@ -63,8 +61,27 @@ kiko ansible_host=kiko.mshome.net
 lilo ansible_host=lilo.mshome.net
 mimo ansible_host=mimo.mshome.net
 nino ansible_host=nino.mshome.net
-
 ```
+
+Generate SSH public key
+```console
+ubuntu@jimny:~$ ssh-keygen -t ed25519 -C "xx@jimny"
+ubuntu@jimny:~$ echo ssh_authorized_keys: > ci_ansible2.yaml
+ubuntu@jimny:~$ echo "  - `cat .ssh/id_ed25519.pub`" >> ci_ansible2.yaml
+```
+
+### Create and setup VM hosts (Managed Nodes)
+```powershell
+PS> multipass launch -n kiko --cloud-init ci_ansible2.yaml
+PS> multipass launch -n lilo --cloud-init ci_ansible2.yaml
+PS> multipass launch -n mimo --cloud-init ci_ansible2.yaml
+PS> multipass launch -n nino --cloud-init ci_ansible2.yaml
+```
+
+
+## SysAdm Operation
+To manage system operation with Ansible playbook. 
+
 
 ### Check if hosts are online
 ```bash
