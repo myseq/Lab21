@@ -45,14 +45,14 @@ ansible_become_method=sudo
 ansible_python_interpreter=/usr/bin/python3
 
 [vm]
-jimny ansible_host=jimny.mshome.net
+#jimny ansible_host=jimny.mshome.net
 kiko ansible_host=kiko.mshome.net
 lilo ansible_host=lilo.mshome.net
 mimo ansible_host=mimo.mshome.net
 nino ansible_host=nino.mshome.net
 
 [ops]
-jimny ansible_host=jimny.mshome.net
+#jimny ansible_host=jimny.mshome.net
 
 [group_a]
 kiko ansible_host=kiko.mshome.net
