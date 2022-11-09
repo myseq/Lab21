@@ -35,9 +35,10 @@ This tutorial will experience in:
 ## Plan (high level) 
 1. Creating 4 VM which include: 
    - 1 k8s client, 1 k8s master node, and 2 k8s worker node
-2. Develop a utility to check and monitor the patch operation
+2. Deploy unpatched app at k8s clueter with load-balancer
+3. Develop a utility to check and monitor the patch operation
    - webping.py
-3. Perform patching operation on mutable infrastructure
+4. Perform patching operation on mutable infrastructure
    - Deploy the new image with k8s
    - Simulate patching operation on apps
 
