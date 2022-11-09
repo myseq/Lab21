@@ -39,7 +39,7 @@ ubuntu@jimny:~$ ansible-config init --disabled > ansible.init
 
 Create inventory file (/etc/ansible/hosts)
 ```console
-$ cat hosts
+$ cat /etc/ansible/hosts
 [all:vars]
 ansible_user=ubuntu
 ansible_port=22
@@ -145,30 +145,30 @@ ubuntu@jimny:~$
 
 ### PING all hosts (with playbook)
 ```bash
-$ ansible-playbook ping.yml
-$ ansible-playbook ping.yml -l group_a
-$ ansible-playbook ping.yml -l group_b
+$ ansible-playbook asb_ping.yml
+$ ansible-playbook asb_ping.yml -l group_a
+$ ansible-playbook asb_ping.yml -l group_b
 ```
 
 ### Check disk space usage (with playbook)
 ```bash
-$ ansible-playbook df.yml
-$ ansible-playbook df.yml -l group_a,group_b
+ubuntu@jimny:~/playbooks$ ansible-playbook asb_df.yml
+ubuntu@jimny:~/playbooks$ ansible-playbook asb_df.yml -l group_a,group_b
 ```
 
 ### Update/upgrade packages for all hosts
 ```bash
-
+ubuntu@jimny:~/playbooks$ ansible-playbook asb_update.yml
 ```
 
 ### Reboot hosts
 ```bash
-
+ubuntu@jimny:~/playbooks$ ansible-playbook asb_reboot.yml
 ```
   
 ### Shutdown all hosts
 ```bash
-
+ubuntu@jimny:~/playbooks$ ansible-playbook asb_poweroff.yml
 ```
 
 ## Misc
