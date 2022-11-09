@@ -3,7 +3,7 @@ Lab21 is a series of tutorials created for learning different technologies :tech
 
 Lab21 is mostly developed with  _**DevOps**_ model in mind. Each of the tutorial comes with `README.md`, and anyone can easily follow along.
 
-:cowboy_hat_face: I've invested a lot of my time :hourglass: in _building_ them as projects, and **make** them happen :sparkler:.
+:cowboy_hat_face: I've invested a lot of my time :hourglass: in _building_ them as small projects, and **make** the improvement happen :sparkler: from time to time.
 
 
 ## Lab21 Tutorials
