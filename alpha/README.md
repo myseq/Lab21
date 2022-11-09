@@ -104,19 +104,6 @@ mimo | SUCCESS => {
 }
 ```
 
-### PING all hosts (with playbook)
-```bash
-$ ansible-playbook ping.yml
-$ ansible-playbook ping.yml -l group_a
-$ ansible-playbook ping.yml -l group_b
-```
-
-### Check disk space usage (with playbook)
-```bash
-$ ansible-playbook df.yml
-$ ansible-playbook df.yml -l group_a,group_b
-```
-
 ### Run an ad hoc command at multiple hosts
 ```console
 ubuntu@jimny:~$ ansible all -a "lsb_release -a"
@@ -141,6 +128,19 @@ Description:    Ubuntu 22.04.1 LTS
 Release:        22.04
 Codename:       jammyNo LSB modules are available.
 ubuntu@jimny:~$
+```
+
+### PING all hosts (with playbook)
+```bash
+$ ansible-playbook ping.yml
+$ ansible-playbook ping.yml -l group_a
+$ ansible-playbook ping.yml -l group_b
+```
+
+### Check disk space usage (with playbook)
+```bash
+$ ansible-playbook df.yml
+$ ansible-playbook df.yml -l group_a,group_b
 ```
 
 ### Update/upgrade packages for all hosts
