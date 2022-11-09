@@ -13,12 +13,17 @@ This is a simple tutorial to learn on basic Ansible playbook to perform sysadm o
   - check if all the hosts are online
   - check disk usage at every hosts
   - update and upgrade packages for all hosts
-- 
+   
  
  
 ## Architecture
 XX hosts will be created.  
-  
+
+
+## IaaS Provisioning
+
+## SysAdm Operation
+
 
 ## Others
 - [Sample](cloud_init/) cloud_init files  
