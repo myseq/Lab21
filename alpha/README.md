@@ -36,6 +36,7 @@ ubuntu@jimny:~$ sudo apt update
 ubuntu@jimny:~$ sudo apt install ansible
 ubuntu@jimny:~$ ansible-config init --disabled > ansible.init
 ```
+
 Create inventory file (/etc/ansible/hosts)
 ```console
 $ cat hosts
@@ -67,17 +68,19 @@ nino ansible_host=nino.mshome.net
 Generate SSH public key
 ```console
 ubuntu@jimny:~$ ssh-keygen -t ed25519 -C "ubuntu@jimny"
-ubuntu@jimny:~$ echo ssh_authorized_keys: > ci_sshkey.yaml
-ubuntu@jimny:~$ cat ci_sshkey.yaml
-#cloud-config
-users:
-  - name: ubuntu
-    no_ssh_fingerprints: true
-    ssh_authorized_keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9Cox0CIU2YiQLH2RdLSjI+nNH/z+kB9XGUvHvtKxgF ubuntu@jimny
-
-ssh:
-  emit_keys_to_console: false
+ubuntu@jimny:~$ cat << EOF >> 
+> #cloud-config
+> users:
+>   - name: ubuntu
+>     no_ssh_fingerprints: true
+>     ssh_authorized_keys:
+>       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9Cox0CIU2YiQLH2RdLSjI+nNH/z+kB9XGUvHvtKxgF ubuntu@jimny
+>
+> ssh:
+>   emit_keys_to_console: false
+>
+> EOF
+ubuntu@jimny:~$
 ```
 
 ### Create and setup VM hosts (Managed Nodes)
