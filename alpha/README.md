@@ -47,7 +47,6 @@ ansible_become_method=sudo
 ansible_python_interpreter=/usr/bin/python3
 
 [vm]
-#jimny ansible_host=jimny.mshome.net
 kiko ansible_host=kiko.mshome.net
 lilo ansible_host=lilo.mshome.net
 mimo ansible_host=mimo.mshome.net
@@ -96,7 +95,6 @@ PS> multipass launch -n nino --cloud-init ci_sshkey.yaml
 
 ## SysAdm Operation
 To manage system operation with Ansible playbook. 
-
 
 ### Check if hosts are online
 ```console
