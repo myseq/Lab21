@@ -84,6 +84,27 @@ To manage system operation with Ansible playbook.
 
 
 ### Check if hosts are online
+```console
+ubuntu@jimny:~/playbooks$ ansible all -m ping
+lilo | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+kiko | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+nino | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+mimo | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+### PING all hosts with playbook
 ```bash
 $ ansible-playbook ping.yml
 $ ansible-playbook ping.yml -l group_a
