@@ -6,7 +6,7 @@ This tutorial will experience in:
 - create custom docker image (with docker compose)
 - create k8s clueter that load-balance an app (Nginx web)
 - create a utility to inspect and monitor the patch operation (webping.py)
-- simulate docker patching on mutable infrastructure :sparkler:
+- **simulate docker patching on mutable infrastructure** :sparkler: 
 
 ## Architecture and Plan
 ```
