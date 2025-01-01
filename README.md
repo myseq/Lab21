@@ -1,12 +1,15 @@
 # Lab21 (README.md)
-Lab21 is a series of tutorials created for learning different technologies :technologist:. 
 
-Lab21 is mostly developed with  _**DevOps**_ model in mind. Each of the tutorial comes with `README.md`, and anyone can easily follow along.
+`Lab21` is a series of tutorials created for learning different technologies :technologist:. 
+
+It is mostly developed with  _**DevOps**_ model in mind. 
+Each of the tutorial comes with `README.md`, and anyone can follow along.
 
 :cowboy_hat_face: I've invested a lot of my time :hourglass: in _building_ them as small projects, and **make** the improvement happen :sparkler: from time to time.
 
 
 ## Lab21 Tutorials
+
 All the tutorials are created by following Greek alphabet. Below is the list of tutorials and the brief description.
 
 |      | Projects | Description      | Year |
