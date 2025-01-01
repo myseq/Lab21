@@ -1,0 +1,32 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - nginx
+write_files:
+  - owner: www-data:www-data
+    path: /var/www/html/index.html
+    content: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <title>Backend_1 by Nginx!</title>
+      <style>
+          body {
+              width: 35em;
+              margin: 0 auto;
+              font-family: Tahoma, Verdana, Arial, sans-serif;
+          }
+      </style>
+      </head>
+      <body>
+      <h1>This is Backend server_1 </h1>
+      <p>This shows that your browser has reached the <strong>backend server 1</strong> 
+      via Nginx load-balancer. </p>
+      <p><em>For troublesooting, you can directly access to this server via 
+      <a href="http://backend1.mshome.net">http://backend1.mshome.net</a></em></p>
+      <p>Refresh your browser to see how Nginx load-balancing works.<br/>
+      Currently the load balancing algorithm used is round robin. <br />See more at
+      <a href="https://myseq.blogspot.com/2022/10/load-balance-with-nginx.html">MySeq blog post</a>.</p>
+      </body>
+      </html>
