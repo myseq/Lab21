@@ -1,0 +1,10 @@
+- name: Ansible restarts VM
+  hosts: all
+  gather_facts: no
+  become: true
+
+  tasks:
+    - name: shutdown -r now (and wait for 5 min)
+      reboot:
+        reboot_timeout: 300
+        test_command: uptime
