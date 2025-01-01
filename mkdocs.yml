@@ -1,0 +1,100 @@
+site_name: Lab21
+
+site_url: http://myseq.github.io/lab21/
+site_author: zd
+site_description: >-
+  A series of tutorials created for learning different technologies.  
+
+repo_name: myseq/lab21
+repo_url: https://github.com/myseq/lab21
+
+# Copyright
+copyright: Copyright &copy; 2025 zd 
+
+# Configuration
+theme:
+  name: material
+  palette:
+
+    # Palette toggle for dark mode (default)
+    - scheme: slate
+      accent: amber
+      primary: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: light
+      accent: indigo
+      primary: black
+      primary: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  favicon: assets/favicon.ico
+  icon: 
+    logo: material/surround-sound-2-1
+    logo: simple/android
+
+  font:
+    text: Fira
+    code: Fira Mono
+
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+    - navigation.instant
+      #- content.footnote.tooltips    ## insiders-only
+      #- navigation.instant.prefetch   ## insiders-only
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+      #- navigation.path   ## insiders-only
+
+      #    - navigation.tabs
+      #    - navigation.tabs.sticky
+
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: simple/github
+      link: https://github.com/myseq/lab21/
+  analytics:
+    provider: google
+    property: G-CQL491X0G6
+
+extra_css:
+  - stylesheets/extra.css
+
