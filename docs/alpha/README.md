@@ -1,5 +1,5 @@
 ---
-icon: simple/android
+icon: simple/ubuntu
 title: readme.md
 ---
 
@@ -10,10 +10,8 @@ This is a simple tutorial to learn on basic Ansible playbook to perform sysadm o
   
 ## Prerequisites
 
-- Install [Multipass](https://multipass.run/install)  
-  
-  
-What's included:
+We need to have [Multipass](https://multipass.run/install) installed to complete this tutorial.
+And this tutorial will cover:  
 
  1. IaaS provisioning
     - creating 5 VM hosts
@@ -25,6 +23,18 @@ What's included:
     - update and upgrade packages for all hosts
     - reboot and shutdown
    
+Here's the simple architecture:
+
+```console
+multipass/
+├── jimny                # VM Host (control node)
+├── kiko                 # VM host (managed node)
+├── lilo                 # VM host (managed node)
+├── mimo                 # VM host (managed node)
+└── nino                 # VM host (managed node)
+```
+
+We will run a series of [SysAdm Operation](#sysadm-operation) from control node to managed node.
 
 ## IaaS Provisioning
 To provision virtual machines with Multipass.
@@ -108,7 +118,8 @@ ubuntu@jimny:~$ ansible-inventory --list -y
 ## SysAdm Operation
 To manage system operation with Ansible playbook. 
 
-### Check if hosts are online
+### 1. Check if hosts are online
+
 ```console
 ubuntu@jimny:~$ ansible all -m ping
 lilo | SUCCESS => {
@@ -129,7 +140,8 @@ mimo | SUCCESS => {
 }
 ```
 
-### Run an ad hoc command at multiple hosts
+### 2. Run an ad hoc command at multiple hosts
+
 ```console
 ubuntu@jimny:~$ ansible all -a "lsb_release -a"
 kiko | CHANGED | rc=0 >>
@@ -154,7 +166,9 @@ Release:        22.04
 Codename:       jammyNo LSB modules are available.
 ubuntu@jimny:~$
 ```
-### Check the uptime and login user at specific host
+
+### 3. Check the uptime and login user at specific host
+
 ```console
 ubuntu@jimny:~$ ansible kiko -a "uptime"
 kiko | CHANGED | rc=0 >>
@@ -167,7 +181,8 @@ ubuntu   pts/0    172.24.196.44    17:08    0.00s  0.07s  0.00s w
 ubuntu@jimny:~$
 ```
 
-### Install nmap package at specific host
+### 4. Install nmap package at specific host
+
 ```console
 ansible kiko -b -m apt -a "name=nmap state=latest"
 ubuntu@jimny:~$ ansible kiko -a "nmap jimny"
@@ -184,30 +199,34 @@ Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
 ubuntu@jimny:~$
 ```  
 
-### PING all hosts (with playbook)
+### 5. PING all hosts (with playbook)
+
 ```bash
 $ ansible-playbook asb_ping.yml
 $ ansible-playbook asb_ping.yml -l group_a
 $ ansible-playbook asb_ping.yml -l group_b
 ```
 
-### Check disk space usage (with playbook)
+### 6. Check disk space usage (with playbook)
+
 ```bash
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_df.yml
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_df.yml -l group_a,group_b
 ```
 
-### Update/upgrade packages for all hosts
+### 7. Update/upgrade packages for all hosts
+
 ```bash
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_update.yml
 ```
 
-### Reboot hosts
+### 8. Reboot hosts
+
 ```bash
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_reboot.yml
 ```
   
-### Shutdown all hosts
+### 9. Shutdown all hosts
 
 ```bash
 ubuntu@jimny:~/playbooks$ ansible-playbook asb_poweroff.yml
@@ -224,11 +243,11 @@ lilo                    Stopped           --               Ubuntu 22.04 LTS
 mimo                    Stopped           --               Ubuntu 22.04 LTS
 nino                    Stopped           --               Ubuntu 22.04 LTS
 ```  
-
   
-## Misc
+## Links
 
- - Some cloud_init [sample files](https://github.com/myseq/lab21/docs/alpha/)  
+ - [Multipass](https://multipass.run/install) quick installation
+ - Sample [cloud_init files](https://github.com/myseq/lab21/docs/alpha/)  
 
 
 
