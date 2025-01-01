@@ -1,9 +1,0 @@
-- name: Ansible check on disk space usage.
-  hosts: all
-  tasks:
-  - name: diskfree command module
-    tags: df diskfree
-    command: df -hT -t ext4
-    register: space
-  - debug:
-      var: space.stdout_lines

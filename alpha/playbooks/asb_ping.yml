@@ -1,8 +1,0 @@
-- name: Ansible check if VM is online and accessible.  
-  hosts: all 
-  strategy: free
-  gather_facts : no 
-
-  tasks:
-  - action: ping
-  
