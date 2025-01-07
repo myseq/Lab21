@@ -1,0 +1,9 @@
+#cloud-config
+users:
+  - name: ubuntu
+    no_ssh_fingerprints: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII9Cox0CIU2YiQLH2RdLSjI+nNH/z+kB9XGUvHvtKxgF ubuntu@jimny
+
+ssh:
+  emit_keys_to_console: false
