@@ -1,6 +1,10 @@
 ---
 icon: simple/nginx
 title: readme.md
+tags: 
+  - Nginx
+  - Multipass
+  - Load-Balancer
 ---
 
 # README (Beta)

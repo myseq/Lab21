@@ -1,6 +1,12 @@
 ---
 icon: simple/kubernetes
 title: readme.md
+tags: 
+  - docker
+  - k8s
+  - Multipass
+  - Python
+  - IaaS
 ---
 
 # README (Gamma)

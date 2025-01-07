@@ -1,6 +1,10 @@
 ---
 icon: simple/ubuntu
 title: readme.md
+tags: 
+  - Multipass
+  - Ubuntu
+  - Ansible
 ---
 
 # README (Alpha)
