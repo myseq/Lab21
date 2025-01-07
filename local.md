@@ -3,7 +3,11 @@
 ## Setup
 
 First, create the virtual environment.
-Then install `mkdocs` and `mkdocs-material`.
+Then install modules:
+ - `mkdocs` 
+ - `mkdocs-material`
+ - `mkdocs-open-in-new-tab`
+
 Last, setup the **site** with `mkdocs`.
 
 ```console
@@ -12,7 +16,7 @@ xx@aio3477:~/projects/lab21% mkdir venv
 xx@aio3477:~/projects/lab21% python3 -m venv venv/lab21
 xx@aio3477:~/projects/lab21% source venv/lab21/bin/activate
 (lab21) xx@aio3477:~/projects/lab21%
-(lab21) xx@aio3477:~/projects/lab21% pip install mkdocs mkdocs-material
+(lab21) xx@aio3477:~/projects/lab21% pip install mkdocs mkdocs-material mkdocs-open-in-new-tab
 ...
 ...
 (lab21) xx@aio3477:~/projects/lab21% pip freeze > requirements.txt
