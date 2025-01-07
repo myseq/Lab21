@@ -1,6 +1,7 @@
 ---
 icon: simple/android
 title: index.md
+link: https://myseq.github.io/Lab21/
 ---
 
 # Lab21 (README.md)
